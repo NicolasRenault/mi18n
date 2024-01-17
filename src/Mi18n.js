@@ -3,8 +3,10 @@
  * Minimalist internationalization javascript library client-side. Really minimalist.
  *
  * @author Nicolas Renault https://nicolasrenault.com
+ * @license MIT
+ * @see https://github.com/NicolasRenault/mi18n
  */
-class Mi18n {
+export default class Mi18n {
 	/**
 	 * Create a Mi18n instance.
 	 * @param {Object} translations - The translations object. This object should contain a default property and at least a property for the default language.
@@ -102,5 +104,3 @@ class Mi18n {
 		}
 	}
 }
-
-export default Mi18n;

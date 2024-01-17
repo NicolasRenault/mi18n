@@ -1,7 +1,7 @@
 {
-	"name": "mi18n",
+	"name": "two-mi18n",
 	"version": "0.1.0",
-	"description": "Minimalist javascript library for internationalization. Really minimalist.",
+	"description": "Minimalist javascript library for internationalization in only two methods. Really minimalist.",
 	"files": [
 		"dist"
 	],

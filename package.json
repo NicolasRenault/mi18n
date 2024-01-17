@@ -1,0 +1,31 @@
+{
+	"name": "mi18n",
+	"version": "1.0.0",
+	"description": "Minimalist javascript library for internationalization. Really minimalist.",
+	"files": [
+		"dist"
+	],
+	"main": "./dist/Mi18n.umd.js",
+	"module": "./dist/Mi18n.es.js",
+	"exports": {
+		".": {
+			"import": "./dist/Mi18n.es.js",
+			"require": "./dist/Mi18n.umd.js"
+		}
+	},
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"keywords": [
+		"i18n",
+		"translation",
+		"translations"
+	],
+	"author": "Nicolas Renault https://nicolasrenault.com",
+	"license": "MIT",
+	"devDependencies": {
+		"vite": "^5.0.11"
+	}
+}

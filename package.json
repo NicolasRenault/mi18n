@@ -1,6 +1,6 @@
 {
 	"name": "mi18n",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "Minimalist javascript library for internationalization. Really minimalist.",
 	"files": [
 		"dist"

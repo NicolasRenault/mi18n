@@ -1,16 +1,16 @@
 {
 	"name": "two-mi18n",
-	"version": "0.1.0",
-	"description": "Minimalist javascript library for internationalization in only two methods. Really minimalist.",
+	"version": "0.2.0",
+	"description": "Minimalist javascript library for internationalization in only two methods. Too minimalist.",
 	"files": [
 		"dist"
 	],
-	"main": "./dist/Mi18n.umd.js",
-	"module": "./dist/Mi18n.es.js",
+	"main": "./dist/TwoMi18n.umd.js",
+	"module": "./dist/TwoMi18n.es.js",
 	"exports": {
 		".": {
-			"import": "./dist/Mi18n.es.js",
-			"require": "./dist/Mi18n.umd.js"
+			"import": "./dist/TwoMi18n.es.js",
+			"require": "./dist/TwoMi18n.umd.js"
 		}
 	},
 	"scripts": {
@@ -21,7 +21,8 @@
 	"keywords": [
 		"i18n",
 		"translation",
-		"translations"
+		"translations",
+		"minimalist"
 	],
 	"author": "Nicolas Renault https://nicolasrenault.com",
 	"license": "MIT",

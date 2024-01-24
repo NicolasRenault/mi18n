@@ -9,6 +9,13 @@ The goal of this library is to provide the easiest way to translate any website.
 -   Lightweight: ~1.6 KB minified
 -   Client-side oriented
 
+## Inspiration
+
+I was searching for a simple way to translate my website. I have found some libraries but they were too complicated for my needs. So I decided to build my own.
+
+I had the idea of a client-side i18n library in mind, then found [simple-translator](https://github.com/andreasremdt/simple-translator) that had the same idea but 3 years before. But I wanted something more minimalist.
+So I take inspiration from [Apline.js](https://alpinejs.dev/) for its minimalist approach.
+
 ## Getting started
 
 ### Installation

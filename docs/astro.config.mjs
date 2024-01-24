@@ -11,15 +11,40 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: "Getting Started",
+					label: "Start Here",
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: "Getting Started", link: "/guides/example/" },
+						{ label: "Getting Started", link: "/getting-started" },
 					],
 				},
 				{
-					label: "Reference",
-					autogenerate: { directory: "reference" },
+					label: "Concept",
+					items: [
+						{
+							label: "Why Two Mi18n",
+							link: "/concept/why-two-mi18n",
+						},
+						{ label: "Example", link: "/concept/example" },
+					],
+				},
+				{
+					label: "Methods",
+					items: [
+						{ label: "TwoMi18n class", link: "/methods/class" },
+						{
+							label: "translateHTML()",
+							link: "/methods/translate-html",
+						},
+						{ label: "translate()", link: "/methods/translate" },
+					],
+				},
+				{
+					label: "References",
+					items: [
+						{
+							label: "Errors",
+							link: "/errors/errors",
+						},
+					],
 				},
 			],
 		}),

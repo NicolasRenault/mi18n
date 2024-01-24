@@ -278,5 +278,5 @@ test("_extractKeyAttribut method default behavior", () => {
 	});
 });
 
-//! Cannot test the method loadTranslations because it's using DOM elements.
+//! Cannot test the method translateHTML because it's using DOM elements.
 //! If you have an idea, please tell me or feel free to contribute. https://github.com/NicolasRenault/two-mi18n/issues/

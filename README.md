@@ -33,9 +33,9 @@ Since it is Client-side oriented, the best way to use it is to call the CDN with
 
 #### The translation object
 
-The translation object is a simple Javascript object that contains the translations. The keys are the translation keys and the values are the translations.
+The `translation object` is a simple Javascript object that contains the translations. Its keys are the language keys and its values are objects that contain the translations with keys and values.
 
-**The translation object must have a `default` key that contains the default language. The default language value must exist in the translation object**
+**The `translation object` must have a `default` key that contains the default language. The default language value must exist in the  `translation object`**
 
 ```js
 const translations = {
@@ -55,7 +55,7 @@ const translations = {
 
 The `TwoMi18n` object is the main object of the library. It contains the two methods of the library.
 
-**The translation object will be validated by the `TwoMi18n` constructor. If the translation object is not valid, an error will be thrown.**
+**The translation object will be validated by the `TwoMi18n` constructor. If the `translation object` is not valid, an error will be thrown.**
 
 ```js
 const twoMi18n = new TwoMi18n(translations);
@@ -65,11 +65,46 @@ const twoMi18n = new TwoMi18n(translations);
 
 The `translate` method is the method that will translate the website. It takes two arguments:
 
--   `key`: The translation key
--   `lang`: The language to translate to
+-   `key`: The translation key from the `translation object`.
+-   `lang`: The language to translate to. 
 
 ```js
 twoMi18n.translate("hello", "fr"); // Bonjour
+```
+You can use any type of language code, are even create new ones.
+
+**If you pass a language that is not in the `translation object`, it will try the first 2 letters.** 
+This behavior is useful if you want to specify language variations depending on the location.
+For example `en-GB`.
+
+```js
+const translations = {
+	default: "en",
+	en: {
+		hello: "Hello",
+		color: "Color",
+	},
+	en-GB: {
+		hello: "Hello",
+		color: "Colour",
+	},
+};
+
+twoMi18n.translate("color", "en"); // Color
+twoMi18n.translate("colour", "en-GB"); // Colour
+```
+
+Now if you want to get a translation for a country that is not defined in the `translation object`, like `en-US`. It will try to match the two first letters.
+
+```js
+twoMi18n.translate("Color", "en-US"); // Color
+//Fallback to the first two letters. Here "en".
+```
+
+If a not-defined variable that doesn't fall back with its two first letters is passed in the param, it will take the value from the `default`.
+
+```js
+twoMi18n.translate("color", "it"); // Color
 ```
 
 #### Translate in HTML

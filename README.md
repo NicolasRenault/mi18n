@@ -65,8 +65,8 @@ const twoMi18n = new TwoMi18n(translations);
 
 The `translate` method is the method that will translate the website. It takes two arguments:
 
--   `key`: The translation key from the `translation object`.
--   `lang`: The language to translate to. 
+-   `key`: The translation key.
+-   `lang`: The language to translate to from the `translation object`. 
 
 ```js
 twoMi18n.translate("hello", "fr"); // Bonjour

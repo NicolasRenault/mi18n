@@ -94,7 +94,7 @@ twoMi18n.translate("color", "en"); // Color
 twoMi18n.translate("colour", "en-GB"); // Colour
 ```
 
-Now if you want to get a translation for a country that is not defined in the `translation object`, like `en-US`. It will try to match the two first letters.
+Now if you want to get a translation for a country not defined in the `translation object`, like `en-US`. It will try to match the two first letters.
 
 ```js
 twoMi18n.translate("Color", "en-US"); // Color
@@ -109,7 +109,7 @@ twoMi18n.translate("color", "it"); // Color
 
 #### Translate in HTML
 
-In the HTML, add the `data-twomi18n` attribute to the elements that need to be translated. The value of the attribute is the translation key.
+Add the `data-twomi18n` attribute to the elements that need to be translated in the HTML. The value of the attribute is the translation key.
 
 ```html
 <h1 data-twomi18n="hello"></h1>
@@ -127,7 +127,7 @@ twoMi18n.translateHTML("fr");
 
 ##### Translate HTML attributes
 
-The `translateHTML` method can also translate HTML attributes. To specify the attribute to translate, add the attribute name after the translation key between brackets.
+The `translateHTML` method can also translate HTML attributes. Add the attribute name after the translation key between brackets to specify the attribute to translate.
 
 ```html
 <input type="text" data-twomi18n="hello[placeholder]"></input>
@@ -142,9 +142,9 @@ You can translate multiple attributes by separating them with a space.
 ></input>
 ```
 
-**Note: When the attribut is not specified, the `innerText` attribute is used.**
+**Note: When the attribute is not specified, the `innerText` attribute is used.**
 
-#### Full example
+#### Example
 
 ```html
 <header>
@@ -178,6 +178,10 @@ You can translate multiple attributes by separating them with a space.
 	twoMi18n.translateHTML("fr");
 </script>
 ```
+
+See a full working example: 
+
+[![Two Mi18n example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/bold-snowflake-tt6chr)
 
 See the full documentation on [twomi18n.nicolasrenault.com](https://twomi18n.nicolasrenault.com/).
 

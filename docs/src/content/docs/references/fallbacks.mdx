@@ -1,0 +1,55 @@
+---
+title: Fallbacks
+---
+
+I have designed Two Mi18n to be as easy to use as possible. That's why I have added some fallbacks to make sure you don't have to worry about some tricky cases.
+
+## Key fallbacks
+
+If the key for the translation is not found in the `translation object`, it will return the key itself with the tag `[TwoMi18n]` in front, so you can easlisy search in the page to find any missed keys.
+
+```js
+twoMi18n.translate("title.color", "fr"); // [TwoMi18n]title.color
+```
+
+## Languages fallbacks
+
+For both methods, you need to pass the language you want to translate to.
+
+```js
+twoMi18n.translate("hello", "fr"); // Bonjour
+```
+
+**If you pass a language that is not in the [`translation object`](/usages/initialization#the-translations-object), it will try the first 2 letters.**
+This behavior is useful if you want to specify language variations depending on the location.
+For example `en-GB`.
+
+```js
+const translations = {
+	default: "en",
+	en: {
+		hello: "Hello",
+		color: "Color",
+	},
+	en-GB: {
+		hello: "Hello",
+		color: "Colour",
+	},
+};
+
+twoMi18n.translate("color", "en"); // Color
+twoMi18n.translate("colour", "en-GB"); // Colour
+```
+
+Now if you want to get a translation for a country not defined in the `translation object`, like `en-US`. It will try to match the two first letters.
+
+```js
+twoMi18n.translate("Color", "en-US"); // Color
+//Fallback to the first two letters. Here "en".
+```
+
+If a not-defined variable that doesn't fall back with its two first letters is passed in the param, it will take the value from the `default`.
+
+```js
+twoMi18n.translate("color", "it"); // Color
+```

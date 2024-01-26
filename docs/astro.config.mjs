@@ -23,26 +23,30 @@ export default defineConfig({
 							label: "Why Two Mi18n",
 							link: "/concept/why-two-mi18n",
 						},
-						{ label: "Example", link: "/concept/example" },
+						{ label: "Examples", link: "/concept/examples" },
 					],
 				},
 				{
-					label: "Methods",
+					label: "Usages",
 					items: [
-						{ label: "TwoMi18n class", link: "/methods/class" },
+						{
+							label: "Initialization",
+							link: "/usages/initialization",
+						},
+						{ label: "translate()", link: "/usages/translate" },
 						{
 							label: "translateHTML()",
-							link: "/methods/translate-html",
+							link: "/usages/translate-html",
 						},
-						{ label: "translate()", link: "/methods/translate" },
 					],
 				},
 				{
 					label: "References",
 					items: [
+						{ label: "Fallbacks", link: "/references/fallbacks" },
 						{
 							label: "Errors",
-							link: "/errors/errors",
+							link: "/references/errors",
 						},
 					],
 				},

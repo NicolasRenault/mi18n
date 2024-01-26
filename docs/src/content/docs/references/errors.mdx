@@ -1,0 +1,61 @@
+---
+title: Errors
+---
+
+To help while developing, `Two-Mi18n` throws errors when something is wrong.
+They are all prefixed with the text `[Two-Mi18n]`.
+
+## Validation of the [`translation object`](/usages/initialization#the-translations-object).
+
+Too help validating the [`translation object`](/usages/initialization#the-translations-object), some errors are thrown in the constructor of [`TwoMi18n`](/usages/initialization#the-twomi18n-object).
+
+### The translations object is not defined.
+
+This error is thrown when the [`translation object`](/usages/initialization#the-translations-object) is not defined.
+
+```js
+const twoMi18n = new TwoMi18n();
+// Error: [Two-Mi18n] Something is wrong with the translation object:
+//          The translations object is not defined.
+```
+
+### The 'default' property is not defined.
+
+This error is thrown when the `default` property is not defined in the [`translation object`](/usages/initialization#the-translations-object).
+The `default` property is required.
+
+Example:
+
+```js
+const translations = {
+	en: {
+		hello: "Hello",
+	},
+	fr: {
+		hello: "Bonjour",
+	},
+};
+
+const twoMi18n = new TwoMi18n(translations);
+// Error: [Two-Mi18n] Something is wrong with the translation object:
+//          The 'default' property is not defined.
+```
+
+### The default language "x" is not defined in the translations object.
+
+This error is thrown when the default language is not defined in the [`translation object`](/usages/initialization#the-translations-object).
+
+```js
+const translations = {
+	default: "en",
+	fr: {
+		hello: "Bonjour",
+	},
+};
+
+const twoMi18n = new TwoMi18n(translations);
+// Error: [Two-Mi18n] Something is wrong with the translation object:
+//          The default language "en" is not defined in the translations object.
+```
+
+{/* TODO finish errors from _getTranslationsLang */}

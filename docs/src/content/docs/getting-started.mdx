@@ -1,0 +1,67 @@
+---
+title: Installation
+description: Getting started with Two Mi18n.
+---
+
+Two Mi18n is a client-side oriented library. It is designed to be included via a script tag. It is also available as a npm package.
+
+## Installation via script tag
+
+```html
+<html>
+	<head>
+		...
+		<script
+			defer
+			src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
+		></script>
+	</head>
+	...
+</html>
+```
+
+> The `defer` attribute in the script tag. It is important to use it to make sure the script is loaded before the page is rendered.
+
+Note the `latest` tag in the URL. You can also use a specific version number. Here is the [list of available versions](https://www.npmjs.com/package/two-mi18n?activeTab=versions).
+See [unpkg](https://unpkg.com/) for more details.
+
+```html
+<script
+	defer
+	src="https://unpkg.com/two-mi18n@1.0/dist/TwoMi18n.umd.js"
+></script>
+```
+
+## Installation via npm as a module
+
+You can also install Two Mi18n as an npm module.
+
+> Note that you will only be able to use the function [`translate()`](usages/translate) with this method. The function [`translateHTML()`](usages/translate-html) is only available when using the script tag.
+
+```bash frame="none"
+npm i two-mi18n
+```
+
+Now you can use it in your code.
+
+```js
+import TwoMi18n from "two-mi18n";
+
+const twoMi18n = new TwoMi18n({
+	locale: "en",
+	translations: {
+		en: {
+			"Hello world": "Hello world",
+		},
+		fr: {
+			"Hello world": "Bonjour le monde",
+		},
+	},
+});
+
+console.log(twoMi18n.translate("Hello world", "fr")); // Bonjour le monde
+```
+
+> See [`TwoMi18n`](usages/initialization#the-twomi18n-object) class, [`translation object`](usages/initialization#the-translations-object), and [`translate()`](usages/translate).
+
+{/* TODO Test npm */}

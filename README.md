@@ -35,7 +35,7 @@ Since it is Client-side oriented, the best way to use it is to call the CDN with
 
 The `translation object` is a simple Javascript object that contains the translations. Its keys are the language keys and its values are objects that contain the translations with keys and values.
 
-**The `translation object` must have a `default` key that contains the default language. The default language value must exist in the  `translation object`**
+**The `translation object` must have a `default` key that contains the default language. The default language value must exist in the `translation object`**
 
 ```js
 const translations = {
@@ -63,17 +63,18 @@ const twoMi18n = new TwoMi18n(translations);
 
 #### Translate in Javascript
 
-The `translate` method is the method that will translate the website. It takes two arguments:
+The `translate` method is the method that will translate a single string. It takes two arguments:
 
 -   `key`: The translation key.
--   `lang`: The language to translate to from the `translation object`. 
+-   `lang`: The language to translate to from the `translation object`.
 
 ```js
 twoMi18n.translate("hello", "fr"); // Bonjour
 ```
+
 You can use any type of language code, are even create new ones.
 
-**If you pass a language that is not in the `translation object`, it will try the first 2 letters.** 
+**If you pass a language that is not in the `translation object`, it will try the first 2 letters.**
 This behavior is useful if you want to specify language variations depending on the location.
 For example `en-GB`.
 
@@ -179,7 +180,7 @@ You can translate multiple attributes by separating them with a space.
 </script>
 ```
 
-See a full working example: 
+See a full working example:
 
 [![Two Mi18n example](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/bold-snowflake-tt6chr)
 

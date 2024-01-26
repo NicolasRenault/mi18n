@@ -1,0 +1,38 @@
+---
+title: Initialization
+---
+
+Like most i18n libraries, Two Mi18n needs an object that defines the translations. This object here is strongly opinionated and has some rules that must be followed to be working.
+
+## The translations object
+
+The `translation object` is a simple Javascript object that contains the translations. Its keys are the language keys and its values are objects that contain the translations with keys and values.
+
+**The `translation object` must have a `default` key that contains the default language.**
+It is the fallback for any case where the language is not valid.
+
+```js
+const translations = {
+	default: "en",
+	en: {
+		hello: "Hello",
+		world: "World",
+	},
+	fr: {
+		hello: "Bonjour",
+		world: "Monde",
+	},
+};
+```
+
+**The default language value must exist in the `translation object`**
+
+## The TwoMi18n object
+
+The `TwoMi18n` object is the main and only object of the library. It contains the two methods of the library, [`translate()`](usages/translate) and [`translateHTML()`](usages/translate-html).
+
+**The translation object will be validated by the `TwoMi18n` constructor. If the `translation object` is not valid, an error will be thrown.**
+
+```js
+const twoMi18n = new TwoMi18n(translations);
+```

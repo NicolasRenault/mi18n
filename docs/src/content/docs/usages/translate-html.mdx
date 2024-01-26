@@ -1,0 +1,79 @@
+---
+title: translateHTML()
+---
+
+## Prepare the HTML
+
+Add the `data-twomi18n` attribute to the elements that need to be translated in the HTML. The value of the attribute is the translation key.
+
+```html
+<h1 data-twomi18n="hello"></h1>
+```
+
+The `translateHTML` method is the method that will translate all the elements with the `data-twomi18n` attribute.
+
+It takes one argument:
+
+-   `lang`: The language to translate to from the [`translation object`](/usages/initialization#the-translations-object).
+
+```js
+twoMi18n.translateHTML("fr");
+```
+
+## Translate HTML attributes
+
+The `translateHTML` method can also translate HTML attributes. Add the attribute name after the translation key between brackets to specify the attribute to translate.
+
+```html
+<input type="text" data-twomi18n="hello[placeholder]"></input>
+```
+
+You can translate multiple attributes by separating them with a space.
+
+```html
+<input
+    type="text"
+    data-twomi18n="world hello[placeholder] world[title]"
+></input>
+```
+
+**Note: When the attribute is not specified, the `innerText` attribute is used.**
+
+## Example
+
+```html
+<header>
+	<h1 data-twomi18n="hello"></h1>
+    <input
+        type="text"
+        data-twomi18n="world hello[placeholder] world[title]"
+    ></input>
+</header>
+
+<script
+	defer
+	src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
+></script>
+
+<script defer>
+	const translations = {
+		default: "en",
+		en: {
+			hello: "Hello",
+			world: "World",
+		},
+		fr: {
+			hello: "Bonjour",
+			world: "Monde",
+		},
+	};
+
+	const twoMi18n = new TwoMi18n(translations);
+
+	twoMi18n.translateHTML("fr");
+</script>
+```
+
+> See more examples [here](/concept/examples).
+
+> See [`Fallbacks`](/references/fallbacks).

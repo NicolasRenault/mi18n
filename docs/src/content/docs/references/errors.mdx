@@ -58,4 +58,14 @@ const twoMi18n = new TwoMi18n(translations);
 //          The default language "en" is not defined in the translations object.
 ```
 
-{/* TODO finish errors from _getTranslationsLang */}
+### No language specified
+
+This error is thrown when no language is passed in parameter of the methods [`translate`](/usages/translate) or [`translateHTML`](/usages/translate-html).
+
+```js
+twoMi18n.translate("hello" /*,  ... */);
+// Error: [Two-Mi18n] No language specified.
+
+twoMi18n.translateHTML(/* ... */);
+// Error: [Two-Mi18n] No language specified.
+```

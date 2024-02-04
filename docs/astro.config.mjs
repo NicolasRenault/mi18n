@@ -6,6 +6,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: "Two Mi18n",
+			customCss: ["./src/styles/custom.css"],
 			social: {
 				github: "https://github.com/NicolasRenault/two-mi18n",
 			},

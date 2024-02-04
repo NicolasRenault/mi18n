@@ -28,3 +28,7 @@
 	--sl-color-gray-7: #f5f6f8;
 	--sl-color-black: #ffffff;
 }
+
+:root:has(#big-content-width) {
+	--sl-content-width: 85rem;
+}

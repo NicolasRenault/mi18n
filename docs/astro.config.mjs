@@ -24,7 +24,7 @@ export default defineConfig({
 							label: "Why Two Mi18n",
 							link: "/concept/why-two-mi18n",
 						},
-						{ label: "Examples", link: "/concept/examples" },
+						{ label: "Example", link: "/concept/example" },
 					],
 				},
 				{

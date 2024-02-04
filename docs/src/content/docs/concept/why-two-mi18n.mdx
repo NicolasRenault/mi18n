@@ -1,3 +1,20 @@
 ---
 title: Why Two Mi18n?
 ---
+
+I came with the idea of this library while developing [qrcode-prevention](https://qrcode.nicolasrenault.com/), a tiny single static site to warn people about the risks of QR codes.
+I wanted to make it available in multiple languages, and I wanted to make it easy to add new languages.
+Since this project was really small, I didn't wanted to install a huge i18n library.
+
+## Inspiration
+
+I wanted the library to work client side and to be as small as possible. Mainly taking inspiration on [AlpineJS](https://alpinejs.dev/).
+
+## The idea
+
+The main idea was using the `data-twomi18n` attribute to mark the elements that need to be translated. Then, the library would replace the content of the element with the translation.
+
+After doing some research, I found [simple-translator](https://github.com/andreasremdt/simple-translator) that was using the exact technique I wanted to use to translte HTML.
+But it was a bit too big for my needs.
+
+So I decided to write my own library, and here it is.

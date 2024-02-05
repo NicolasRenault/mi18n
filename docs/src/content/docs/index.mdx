@@ -13,3 +13,45 @@ hero:
           link: https://github.com/NicolasRenault/two-mi18n
           icon: external
 ---
+
+```html
+<script
+	defer
+	src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
+></script>
+
+<script>
+	const twoMi18n = new TwoMi18n({
+		default: "en",
+		translations: {
+			en: {
+				"Hello world": "Hello world",
+			},
+			fr: {
+				"Hello world": "Bonjour le monde",
+			},
+		},
+	});
+
+	twoMi18n.translateHTML();
+</script>
+```
+
+> See how it's work [here.](/usages/initialization)
+
+import Example from "../../components/Example.astro";
+
+<Example />
+
+## Simple, lightweight and easy to use
+
+`Two Mi18n` is a Javascript library for translating websites directly on the client.
+The goal of this library is to provide the easiest way to translate any website.
+
+-   Minimalist and easy to use: Only two methods
+-   Lightweight: ~1.6 KB minified
+-   Client-side oriented
+
+import { LinkCard } from "@astrojs/starlight/components";
+
+<LinkCard title="Read the documentation" href="/getting-started" />

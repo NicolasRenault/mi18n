@@ -7,14 +7,11 @@ Two Mi18n is a client-side oriented library. It is designed to be included via a
 
 ## Installation via script tag
 
-```html
+```html {4}
 <html>
 	<head>
 		...
-		<script
-			defer
-			src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
-		></script>
+		<script defer src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"></script>
 	</head>
 	...
 </html>
@@ -25,11 +22,8 @@ Two Mi18n is a client-side oriented library. It is designed to be included via a
 Note the `latest` tag in the URL. You can also use a specific version number. Here is the [list of available versions](https://www.npmjs.com/package/two-mi18n?activeTab=versions).
 See [unpkg](https://unpkg.com/) for more details.
 
-```html
-<script
-	defer
-	src="https://unpkg.com/two-mi18n@1.0/dist/TwoMi18n.umd.js"
-></script>
+```html 
+<script defer src="https://unpkg.com/two-mi18n@1.0/dist/TwoMi18n.umd.js"></script>
 ```
 
 ## Installation via npm as a module
@@ -51,15 +45,15 @@ const twoMi18n = new TwoMi18n({
 	default: "en",
 	translations: {
 		en: {
-			"Hello world": "Hello world",
+			"hello-world": "Hello world",
 		},
 		fr: {
-			"Hello world": "Bonjour le monde",
+			"hello-world": "Bonjour le monde",
 		},
 	},
 });
 
-console.log(twoMi18n.translate("Hello world", "fr")); // Bonjour le monde
+console.log(twoMi18n.translate("hello-world", "fr")); // Bonjour le monde
 ```
 
 > See [`TwoMi18n`](usages/initialization#the-twomi18n-object) class, [`translation object`](usages/initialization#the-translations-object), and [`translate()`](usages/translate).

@@ -26,7 +26,7 @@ The `default` property is required.
 
 Example:
 
-```js
+```js {11, 12}
 const translations = {
 	en: {
 		hello: "Hello",
@@ -45,7 +45,7 @@ const twoMi18n = new TwoMi18n(translations);
 
 This error is thrown when the default language is not defined in the [`translation object`](/usages/initialization#the-translations-object).
 
-```js
+```js {9, 10}
 const translations = {
 	default: "en",
 	fr: {
@@ -62,7 +62,7 @@ const twoMi18n = new TwoMi18n(translations);
 
 This error is thrown when no language is passed in parameter of the methods [`translate`](/usages/translate) or [`translateHTML`](/usages/translate-html).
 
-```js
+```js {2, 5}
 twoMi18n.translate("hello" /*,  ... */);
 // Error: [Two-Mi18n] No language specified.
 

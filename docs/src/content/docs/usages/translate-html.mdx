@@ -30,30 +30,21 @@ The `translateHTML` method can also translate HTML attributes. Add the attribute
 
 You can translate multiple attributes by separating them with a space.
 
-```html
-<input
-    type="text"
-    data-twomi18n="world hello[placeholder] world[title]"
-></input>
+```html 
+<input type="text" data-twomi18n="world hello[placeholder] world[title]"></input>
 ```
 
 **Note: When the attribute is not specified, the `innerText` attribute is used.**
 
 ## Example
 
-```html
-<header>
-	<h1 data-twomi18n="hello"></h1>
-    <input
-        type="text"
-        data-twomi18n="world hello[placeholder] world[title]"
-    ></input>
-</header>
+```html {29}
+<head>
+	<script defer src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"></script>
+</head>
 
-<script
-	defer
-	src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
-></script>
+<h1 data-twomi18n="hello"></h1>
+<input type="text" data-twomi18n="world hello[placeholder] world[title]"></input>
 
 <script defer>
 	const translations = {

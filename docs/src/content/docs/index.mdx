@@ -14,26 +14,28 @@ hero:
           icon: external
 ---
 
-```html
-<script
-	defer
-	src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"
-></script>
+```html {1, 4, 20, 21}
+<script defer src="https://unpkg.com/two-mi18n@latest/dist/TwoMi18n.umd.js"></script>
+
+...
+<p data-twomi18n="hello-world">Hello world</p>
+...
 
 <script>
 	const twoMi18n = new TwoMi18n({
 		default: "en",
 		translations: {
 			en: {
-				"Hello world": "Hello world",
+				"hello-world": "Hello world",
 			},
 			fr: {
-				"Hello world": "Bonjour le monde",
+				"hello-world": "Bonjour le monde",
 			},
 		},
 	});
 
-	twoMi18n.translateHTML();
+	console.log(twoMi18n.translate("hello-world", "fr")); //Bonjour le monde
+	twoMi18n.translateHTML("fr");
 </script>
 ```
 

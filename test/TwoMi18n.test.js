@@ -159,6 +159,24 @@ test("translate method with 5 characters language code and no translation", () =
 	);
 });
 
+test("translate method when key not found", () => {
+	const translations = {
+		default: "en",
+		en: {
+			"hello-world-2": "Hello world 2!",
+		},
+		fr: {
+			"hello-world-2": "Bonjour le monde 2 !",
+		},
+	};
+
+	const TwoMi18n_instance = new TwoMi18n(translations);
+
+	expect(TwoMi18n_instance.translate("hello-world", "en")).toEqual(
+		"[Two-Mi18n]hello-world"
+	);
+});
+
 test("_getTranslationsLang method with no language", () => {
 	const translations = {
 		default: "en",
